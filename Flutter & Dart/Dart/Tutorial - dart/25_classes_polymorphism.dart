@@ -23,7 +23,8 @@ class Dog extends Animal {
 
 	String race;
 
-	String color = "Black";     // Property Overriding
+	String color = "Black";     
+    // Property Overriding
     // Surchage d'attribbut
 
 	void bark() {
