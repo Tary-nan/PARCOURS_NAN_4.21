@@ -1,4 +1,4 @@
-Exercice 1 : Créer et détruire des Bots
+# Exercice 1 : Créer et détruire des Bots
 # LiveCoding 1
 ### Debut 15 H 30 - 16 H 50
 
