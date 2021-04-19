@@ -7,12 +7,12 @@ void main() {
 
 // EXEMPLE 1
 // avant d'utiliser le for il faudrais savoir ou s'arreter
-	for (int i = 1; i <= 10; i++) {
-
-		if ( i % 2 == 0) { // la condition verifie si le nombre est paire puis l'affiche
-			print(i);
-		}
-	}
+	// for(int i = 1; i <= 10; i++) {
+  //   //print(i);
+	// 	 if ( i % 2 == 0) { // la condition verifie si le nombre est paire puis l'affiche
+	// 	 	print(i);
+	// 	}
+	// }
 
 
 // EXEMPLE 2
@@ -21,9 +21,14 @@ void main() {
 
 	List planetList = ["Mercury", "Venus", "Earth", "Mars"];
 
-	for (String planet in planetList) {
-		print(planet);
-	}
+  for(int i = 0; i < planetList.length; i++){
+    print(i);
+    print(planetList[i]);
+  }
+
+	// for (String element in planetList) {
+	// 	print(element);
+	// }
   //resultat
 
   // Mercury

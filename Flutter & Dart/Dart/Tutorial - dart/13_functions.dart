@@ -1,4 +1,4 @@
-
+import 'dart:io';
 
 // OBJECTIFS
 // 1. Definit une fonction
@@ -6,28 +6,11 @@
 // 3. Returner la valeur de la fonction 
 
 void main() {
-
-	trouverPerimeter(4, 2);
-	trouverPerimeterAvecParametreOptionnel(length:4, largeur:2);
-
-	int result = multiplier(10, 5);
-	print("Le resulat est  $result");
+  addition(12, 4);
+  
 }
 
-void trouverPerimeter(int length, int largeur) {
 
-	int perimeter = 2 * (length + largeur);
-	print("Le perimetre est $perimeter");
-}
-
-void trouverPerimeterAvecParametreOptionnel({int length, int largeur}) {
-
-	int perimeter = 2 * (length + largeur);
-	print("Le perimetre est $perimeter");
-}
-
-int multiplier(int length, int largeur) {
-
-	int resultat = length * largeur;
-	return resultat;
+void addition(int nb1, int nb2) {
+  print("La somme de $nb1 + $nb2 = ${nb1 + nb2}");
 }

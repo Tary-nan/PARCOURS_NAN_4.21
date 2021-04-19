@@ -7,7 +7,7 @@ void main() {
 
 	// final
 	final cityName = 'Mumbai';
-	//	cityName = 'Abidjan';     // si a un moment du programme je reassigne 
+	//cityName = 'Abidjan';     // si a un moment du programme je reassigne 
   // la variable cityName par autre chose j'aurai une levé execption (error); 
 
 	final String countryName = 'India';

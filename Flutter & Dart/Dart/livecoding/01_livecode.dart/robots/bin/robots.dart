@@ -1,5 +1,4 @@
 import '../lib/classe_bot.dart';
-import '../lib/classe_player.dart';
 import '../lib/utils.dart';
 
 void main(List<String> arguments) {

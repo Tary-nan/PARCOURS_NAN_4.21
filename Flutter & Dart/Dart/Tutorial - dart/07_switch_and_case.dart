@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   //****
   // COMMENT UTILISER LES SWITCH CASE
@@ -5,71 +7,45 @@ void main() {
   // */
 
 // EXEMPLE 1
-  String grade = 'A';
 
-  switch (grade) {
-    case 'A':
-      print("Excellent grade");
-      break;
+// print('//////////////////////////////');
+// print('Entrer Votre Grade (A, B, C ou F) SVP!'); // Ecrire 
+// String grade = stdin.readLineSync();
+// if (!grade.isEmpty) {
+//   print('tout va bien');
+  
+//   switch (grade) {
+//     case 'A': // if (A == A)
+//       print("Excellent grade");
+//       break;
+//     case 'B': // if (A == B)
+//       print("Super !");
+//       break;
+//     case 'C': // if (A == C)
+//       print("Mauvais travail");
+//       break;
+//     case 'F':
+//       print("Vous avez echouer");
+//       break;
+//     default:
+//       print("Invalide Grade");
+//   }
+// }else{
+//   print('Vous devez entrer quelque chose');
+// }
 
-    case 'B':
-      print("Super !");
-      break;
+// EXEMPLE 2 // Demander 2 nombre a l'utilisateur puis faire l'addition de ce nombre
 
-    case 'C':
-      print("Mauvais travail");
-      break;
 
-    case 'F':
-      print("Vous avez echouer");
-      break;
-    default:
-      print("Invalide Grade");
-  }
+print('//////////////////////////////');
+print('Entrer nombre 1'); // Ecrire 
+var resultNombre1 = int.parse(stdin.readLineSync());
+print(resultNombre1.runtimeType);
 
-  // EXEMPLE 2
-  Lumiere etat = Lumiere.eteint;
+print('Entrer nombre 2'); // Ecrire 
+var resultNombre2 = int.parse(stdin.readLineSync());
+var resultat = resultNombre1 + resultNombre2;
 
-  switch (etat) {
-    case Lumiere.allumer:
-      print('vous avez la lumiere allumer');
-      break;
+print(" La somme de $resultNombre1 + $resultNombre2 = $resultat ");
 
-    case Lumiere.eteint:
-      print('vous avez la lumiere eteinte');
-      break;
-
-    default:
-      print('ampoule griller');
-  }
-
-  // EXEMPLE 3
-
-  int note = 10;
-  switch (note) {
-    case 8:
-      print('mauvaise note');
-      break;
-
-    case 12:
-      print('bonne note');
-      break;
-
-    case 14:
-      print('super continuer comme xa');
-      break;
-
-    case 16:
-      print('bien');
-      break;
-
-    case 18:
-      print('excellent');
-      break;
-
-    default:
-      print('ok');
-  }
 }
-
-enum Lumiere { allumer, eteint }

@@ -6,7 +6,7 @@ void main() {
   //*** SYNTAXE TERNAIRE */
 
   //EXEMPLE 1
-  // 1.   condition ? exp1 : exp2
+  // 1. condition ? exp1 : exp2
   // Si condition est vrai, alors je retourne exp1 sinon je retourne exp2;
 
   int a = 2;
