@@ -9,12 +9,7 @@ int lanceDee(String playerName) {
 }
 
 
-String lireText(String question) {
+String lireText(String? question) {
   print(question);
-  return (stdin.readLineSync()).value;
-}
-
-
-extension valueString on String? {
-  String get value => this != null ? this! : '';
+  return stdin.readLineSync()!;
 }
