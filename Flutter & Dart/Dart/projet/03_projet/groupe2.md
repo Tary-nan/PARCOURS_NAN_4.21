@@ -1,69 +1,50 @@
-# ENNONCER 2
-[ 01 ] - PROJET DE FIN DU MOIS DART
+# [Projet 04 ]: Progrès
 
-# Encore  : Les Robots
+## Notions abordées :
+* Ajouter des fonctions aux objets
+* Permettre aux objets de modifier leurs propres données
 
-Nous allons construire une application de Robots virtuels, sans défense, qui penvent se présenter et se déplacer sur une carte (la carte n'entre pas de le spectre du TP ) et être confrontés à des méchants qui pourront les attaquer. Pour faciliter le travail nous allons utiliser les concepts de la programmation orientée objet dans un nouveau projet dart.
+## But de ce Projet :
+```Nous continuons à améliorer notre jeu vidéo de type RPG en ajoutant la notion d’amélioration despersonnages.```
 
-# Etape 1
-## 1 - Créer une Classe Robot
-La première étape de cette exercice sera de créer une classe Robot avec les caractéristiques suivantes :
+## A vous de jouer :
+Déplacer les fonctions d’affichage.Notre app possède 2 fonctions permettant d’afficher soit un Bot soit un Player ; ces fonctions sont situées dans notre fichier principal.
+Faites en sorte de déplacer ces fonctions à l’intérieur de leurs classes respectives, pour pouvoir demander à n’importer quel objet de type Bot ou Player de s’afficher lui même dans la console.
 
-* Un Nom
-* Des points de vie (initialisés à 100 dans le constructeur)
-* Une vitesse maximale de déplacement ( Initialisée à 3 par défaut dans le constructeur)
-* Une position, représentée par des coordonnées X et Y initialisée à (0,0) dans le constructeur
-Une fois la classe créée, nous pouvons générer un ou plusieurs robots basés sur ce modèle.
+Vous pouvez modifiez ou supprimer les paramètres reçus par ces fonctions si nécessaire.
+Déplacer les fonctions d’attaque
 
-## 2 - Robot a un ami.
-Nous venons de créer une classe Robot et un objet basé sur cette classe. Nous pouvons en réalité créer une infinité d'objets à partir de la même classe.
+En suivant le même principe que pour les fonctions d’affichage, déplacez les fonctions d’attaque à l’intérieur de leurs classes respectives.
 
-Notre robot se sent un peu seul. Ajoutez un second robot et donnez-lui un nom différent pour pouvoir les différencier.
+L’objectif consiste à pouvoir demander à un object de type Bot d’attaquer un objet de type Player avec une fonction située dans la classe Bot.
 
-## 3 - Des Robots qui parlent
-Créer une méthode que l'on appellera presentation(). Cette méthode fait parler le robot dans la console et lui fait dire quelque chose de la forme :
+Inversément, on doit pouvoir demander à un Player d’attaquer un Bot avec une fonction située
+dans la classe Player.
 
-"Bonjour je m'appelle Bob Bobby. J'ai 100 points de vie et je me déplace à 3 cases par seconde. Je suis à la case de coordonnées (0 ; 0 ) "
+Vous pouvez modifiez ou supprimer les paramètres reçus par ces fonctions si nécessaire.
 
-* Une fois la méthode créée, demander à chaque robot de se présenter.
+```Remarque : la fonction de lancer de dés devrait rester dans notre fichier principal. Vous pourrez toujours y accéder depuis les classes Bot et Player en important notre fichier principal en haut de chacun des fichiers bot.dart et player.dart.```
 
-## 4 - Une armée de robots
-Qu'est-ce qui est 2 fois mieux que 2 robots ? 4 robots !
+### Améliorer les fonctions d’attaque
+Utilisez la variable force de l’objet qui attaque pour multiplifer l’effet de la valeur des dés ; ceci s’applique aux Bot comme aux Player.
 
-Pour bien les ranger en ordre de bataille, nous allons assembler nos robots dans un Tableau une List
+### Ajouter une fonction de victoire pour les objets de type Player
+Vous pourrez appeler cette fonction à la fin de chaque partie gagnée.
 
-Créez 4 robots dans un Tableau et faites les se présenter à tour de rôle grâce à une boucle.
+### Faites en sorte d’améliorer le joueur après chaque victoire. 
 
-## 5 - Des Robots à la conquête du monde
-Nos Robots veulent maintenant se déplacer pour conquérir le monde. Créer une fonction seDeplacerVers() qui permet de se déplacer vers le haut, le bas, la gauche, ou la droite sur la carte. En plus de la direction, on doit pouvoir choisir de se déplacer de 1 au nombre maximum de cases correspondant à la vitesse maximale de déplacement du robot (3 par défaut)
+Voici des exemples d’améliorations possibles :
 
-Faire déplacer les robots dans toutes les directions au choix. Après les avoir fait déplacer, les faire parler à nouveau pour vérifier qu'ils sont bien dans des cases aux coordonnées différentes.
+* Augmenter la force d’un montant fixe (variable et tiré au sort)
+* Augmenter la force d’une pourcentage (variable et tiré au sort). Vous pouvez changer le type de la variable force pour utiliser un réel à la place d’un entier.
+* Ajouter une variable XP qui pourrait augmenter proportionnellement à la force du Bot vaincu.
+* etc.
 
-## 6 - En mouvement brownien
-Nous voulons permettre à nos robots d’effectuer plusieurs tours de déplacement d’affilée.
+### Gérer plusieurs tours de jeu
+Dans votre fonction principale, veillez à ce que le joueur qui vient de gagner un Bot, puisse en affronter un autre, juste après. Tant qu’il est victorieux, il continue d’affronter des Bot, dès qu’il perds, vous lui affichez son résultat (nombre de bots vaincus ou un score que vous avez calculé).
 
-Créer une fonction seDeplacerAleatoirement() qui prend en paramètre un nombre de coups de déplacement. Elle choisira aléatoirement de se déplacer de 1 ou plusieurs cases dans des directions différentes. 
+### Pour rendre le jeu plus intéressant, vous pouvez ajouter plusieurs fonctionnalités :
 
-Exemple: si on appelle : robot.seDeplacerAleatoirement(4) …le robot se déplacera aléatoirement 4 fois. Par exemple : une fois vers le haut de 1 case, une fois vers la gauche de 3 cases, une autre fois vers la gauche de 2 cases et une fois vers le bas de 2 cases.
-
-Faire parler à nouveau nos robots pour vérifier qu’ils ont bien bougé.
-
-## 7 - Des robots uniques
-Leur nom ne leur suffit pas. Nos robots aimeraient bien avoir un peu plus de personnalité.
-
-Ajouter un second constructeur qui permet de définir, en plus du nom, les points de vie, la vitesse et la position initiale du robot.
-
-Faire en sorte ensuite que, lors de la création des objets , ceux‐ci aient des caractéristiques différentes de votre choix.
-
-Les robots se disent-­ils bien placés à des cases différentes de (0 ; 0) audépart ? Vont‐ils bien se déplacer à la nouvelle vitesse maximale qu’on leur a définie?
-
-## 8 - Des Robots Méchants
-Maintenant afin de donner un peu de piment dans la vie de nos Robots, nous allons donc créer des Robots pouvant infliger des dégats soit à distance soit en "corp à corp". Pour cela nous allons donc réaliser une classe "Méchant" qui a les caractéristiques suivantes :
-
-* Les mêmes caractéristique que la classe Robot
-* Des points de dommages infligés
-* Une options dégats à distance ( vrai ou faux)
-
-Ces méchants pourront égamelement effectuer une action attaquer une cible qui aura des conséquences différentes en fonction de la possibilité d'attaque à distance ou non. Par exemple si un robot ne peut pas faire d'attaque à distance et qu'il essaie d'attaquer un Robot qui n'est pas à côté de lui on affiche un message du type "La cible est trop loin pour être attaquée" Pour cette méthode je laisse libre court à votre imagination pour la répartition des dégâts.
-
-Nous pourrons donc ensuite générer des Robots méchants
+* Augmenter progressivement la force des bots
+* Augmenter le nombre de bots qui attaquent simultanément le joueur
+* Faire en sorte que l’amélioration du joueur à la fin de chaque partie gagnée soit proportionnelleà la difficulté du combat qu’il vient de remporter
