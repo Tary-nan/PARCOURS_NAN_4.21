@@ -9,7 +9,7 @@ void main() {
   pays.add("Japan");
   print(pays);
 
-  List<int> numbersList = List();
+  List<int> numbersList = [];
   // Method 2: JE CREER UN TABLEAU VIDE PUIS J'AJOUTE ENSUITE DES DONNEES
   numbersList.add(73); // Operation d'ajout
   numbersList.add(64);

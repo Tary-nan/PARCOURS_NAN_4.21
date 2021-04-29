@@ -49,7 +49,7 @@ void main(List<String> arguments) {
     // si tourDuJoueur avait une valeur true avec le point d'exclamation je change sa valeur 
     // si tourDuJoueur avait une valeur false => elle devient alors true pour passer la main
     tourDuJoueur = !tourDuJoueur;
-  } while (bot.sante > 0 && player.sante > 0);
+  } while (bot.sante! > 0 && player.sante! > 0);
 
   print('Le bot a été vaincu !');
 }

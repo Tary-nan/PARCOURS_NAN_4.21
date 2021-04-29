@@ -4,6 +4,10 @@ import 'dart:math';
 import 'classe_bot.dart';
 import 'classe_player.dart';
 
+extension valueString on String? {
+  String get value => this != null ? this! : '';
+}
+
 int lanceDee(String playerName) {
   final aleatoire = Random();
   final nombreAleatoire = aleatoire.nextInt(6) + 1 + aleatoire.nextInt(6) + 1;
@@ -13,7 +17,7 @@ int lanceDee(String playerName) {
 
 String lireText(String question) {
   print(question);
-  return stdin.readLineSync();
+  return stdin.readLineSync().value;
 }
 
 void displayPlayer(Players p) {
@@ -26,11 +30,11 @@ void displayBot(Robot b) {
 
 void attackBot(Players player, Robot bot) {
   lireText("Appuyez sur entrée pour lancer les dés");
-  final deevaleur = lanceDee(player.pseudo);
-  bot.sante = bot.sante - deevaleur;
+  final deevaleur = lanceDee(player.pseudo!);
+  bot.sante = bot.sante! - deevaleur;
 }
 
 void attackPlayer(Robot bot, Players player) {
   final deevaleur = lanceDee("Le Bot");
-  player.sante -= deevaleur;
+  player.sante = player.sante! -  deevaleur;
 }

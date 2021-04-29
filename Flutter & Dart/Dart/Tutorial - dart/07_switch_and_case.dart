@@ -38,14 +38,32 @@ void main() {
 
 
 print('//////////////////////////////');
+
+var resultat = 0;
+int resultNombre2 = 0;
+
 print('Entrer nombre 1'); // Ecrire 
-var resultNombre1 = int.parse(stdin.readLineSync());
+var resultNombre1 = int.parse(stdin.readLineSync()!);
 print(resultNombre1.runtimeType);
 
 print('Entrer nombre 2'); // Ecrire 
-var resultNombre2 = int.parse(stdin.readLineSync());
-var resultat = resultNombre1 + resultNombre2;
+String? saisir = stdin.readLineSync();
+var result = saisir.parseInt();
+
+print('//////////////////////////////');
+print(result);
+
+
+if(saisir != null){
+   resultNombre2 = int.parse(saisir);
+   resultat = resultNombre1 + resultNombre2;
+}
 
 print(" La somme de $resultNombre1 + $resultNombre2 = $resultat ");
 
+}
+
+extension valueString on String? {
+  String get value => this != null ? this! : '';
+  int parseInt() =>value.isEmpty ? 0 : int.parse(value);
 }

@@ -18,13 +18,18 @@ void main() {
 }
 
 class Student {
-  String name; // Une Variable de Class est par defaut un Getter et Setter
-  double
+  String? name; // Une Variable de Class est par defaut un Getter et Setter
+  double?
       _percent; // _percent est un attribut privee uniquement disponible dans ce fichier
 
   // Creation d'un setter personnaliser
   void set setPercentage(double value) =>
       _percent = (value / 500) * 100;
   // Je creer mon getter pour donner acces a mon attribut priver
-  double get getPercentage => _percent;
+  double get getPercentage => _percent.value;
+}
+
+
+extension _ on double? {
+  double get value => this != null ? this ! : 0.0;
 }

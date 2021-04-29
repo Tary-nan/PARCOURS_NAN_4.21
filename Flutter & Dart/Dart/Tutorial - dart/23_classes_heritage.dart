@@ -5,6 +5,12 @@
 // 3. Creation de la Class Dog 
 // 3. Creation de la Class Cat
 // Dog et Cat heriterons de la class Animal
+// 
+
+extension valueString on String? {
+  String get value => this != null ? this! : '';
+  int parseInt() =>value.isEmpty ? 0 : int.parse(value);
+}
 
 void main() {
 
@@ -28,7 +34,7 @@ void main() {
 // 2. Creation de la Class Animal 
 class Animal {
 
-	String color;
+	String? color;
 
 	void eat() {
 		print("Mange !");
@@ -38,7 +44,7 @@ class Animal {
 // 3. Creation de la Class Dog 
 class Dog extends Animal {      // Dog est l'enfant de la class Animal, Animal est une super Class ou la class parent
 
-	String race;
+	String? race;
 
 	void aboie() {
 		print("wouf !");
@@ -48,7 +54,7 @@ class Dog extends Animal {      // Dog est l'enfant de la class Animal, Animal e
 // 3. Creation de la Class Cat 
 class Cat extends Animal {      // Cat is Child class or sub class, Animal is super or parent class
 
-	int age;
+	int? age;
 
 	void miole() {
 		print("Mion !");

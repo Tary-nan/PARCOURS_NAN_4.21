@@ -5,7 +5,7 @@ void main(List<String> args) {
   var samsungS5 = Telephone('gris', 'samsungS5', 70000);
 
   print("Vous avez combien sur vous pour pouvoir evaluer le type de telephone qu'on peut vous offrir");
-  var price = double.parse(stdin.readLineSync());
+  var price = (stdin.readLineSync()).parseDouble();
 
   if (price <= 70000) {
     print('vous pouvez acheter le telephone ${samsungS5.marque}');
@@ -13,6 +13,11 @@ void main(List<String> args) {
      print('vous n\'avez pas assez d\'argent pour acheter le  ${blackBerry.marque} qui coûte  ${blackBerry.prix} milles');
   }
 
+}
+
+extension valueString on String? {
+  String get value => this != null ? this! : '';
+  double parseDouble() =>value.isEmpty ? 0 : double.parse(value);
 }
 
 

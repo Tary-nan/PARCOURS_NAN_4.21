@@ -19,7 +19,7 @@ void afficheVille(String name1, String name2, String name3) {
 
 // Parametre optionnel
 // lorsqu'on execute la fonction seul le name 1 est obligatoire 
-void affichePays(String name1, [String name2, String name3]) {
+void affichePays(String name1, [String? name2, String? name3]) {
 
 	print("Name 1 is $name1");
 	print("Name 2 is $name2");

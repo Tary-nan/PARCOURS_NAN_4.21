@@ -18,7 +18,7 @@ void main() {
 
 class Animal {
 
-	String color;
+	String? color;
 
 // lE CONSTRUCTEUR A LE MEME NOM QUE LE CLASS
 	Animal(String color) {
@@ -35,7 +35,7 @@ class Animal {
 
 class Dog extends Animal {
 
-	String race;
+	String? race;
 // Permet de copier le constrcuteur du parent tel que ses son attribut couleur ou color
 	Dog(String race, String color) : super(color) {
 		this.race = race;

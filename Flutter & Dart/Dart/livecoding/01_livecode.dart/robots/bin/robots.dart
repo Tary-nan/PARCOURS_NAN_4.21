@@ -24,13 +24,13 @@ void main(List<String> arguments) {
 
     // Lancer de Dee aleatoire
     final deeValeur = lanceDee(username);
-    bot.sante = bot.sante - deeValeur;
+    bot.sante = bot.sante! - deeValeur;
 
     print('Bot - sante : ${bot.sante}% \n');
 
     compteur++;
     print('Fin du tour $compteur\n');
-  } while (bot.sante > 0);
+  } while (bot.sante! > 0);
 
   print('Le bot a été vaincu !');
 }

@@ -3,7 +3,7 @@
 
 // exemple syntaxe
 
-fonction({int param1, String params2}) {}
+fonction({int? param1, String? params2}) {}
 
 // lorsque j'execute la fonction
 // je fais ceci
@@ -17,10 +17,13 @@ void main() {
   trouveVolume(10, height: 20, largeur: 5);
 }
 
-int trouveVolume(int length, {int largeur, int height}) {
+int? trouveVolume(int length, {int? largeur, int? height}) {
   print("La longeur est $length");
   print("La Largeur est $largeur");
   print("La hauteur est  is $height");
 
-  print("Le Volume est ${length * largeur * height}");
+  if(largeur != null  && height != null){
+      print("Le Volume est ${length * largeur * height}");
+  }
+
 }

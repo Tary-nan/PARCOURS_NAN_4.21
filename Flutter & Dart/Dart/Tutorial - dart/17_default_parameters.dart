@@ -9,10 +9,14 @@ void main() {
   trouveVolume(10, height: 20, largeur: 5);
 }
 
-int trouveVolume(int length, {int largeur = 2, int height = 5}) {
+int trouveVolume(int length, {int? largeur = 2, int? height = 5}) {
   print("La longeur est $length");
   print("La Largeur est $largeur");
   print("La hauteur est  is $height");
 
-  print("Le Volume est ${length * largeur * height}");
+   if(largeur != null  && height != null){
+      print("Le Volume est ${length * largeur * height}");
+      return length * largeur * height;
+  }
+  return 0;
 }

@@ -57,7 +57,7 @@ void main() {
       throw new DepotException();
     }
   } catch (e) {
-    print(e.errorMessage());
+    print(e.toString());
   } finally {
     // Code
   }

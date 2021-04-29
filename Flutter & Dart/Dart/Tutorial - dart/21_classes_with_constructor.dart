@@ -32,7 +32,7 @@ void main() {
 class Student {
   // attribut de la class
   int id = -1; // ajout de valeur par default a un attribut
-  String name;
+  String? name;
 
   Student(this.id, this.name); // constructeur avec paramettre
 

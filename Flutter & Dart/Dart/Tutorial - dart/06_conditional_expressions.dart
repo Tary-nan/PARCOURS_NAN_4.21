@@ -21,7 +21,7 @@ void main() {
   // If expr1 ce n'est pqs null, retourne sa valeur;
   // sinon retourne la seconde proposition .
 
-  String name = null;
+  String? name = null;
 
   String nomAfficher = name ?? "Pas de nom";
   print(nomAfficher);
