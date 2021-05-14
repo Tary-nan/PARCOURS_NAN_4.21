@@ -9,7 +9,7 @@ int lanceDee(String playerName) {
 }
 
 
-String lireText(String? question) {
+String lireText(String question) {
   print(question);
-  return stdin.readLineSync()!;
+  return stdin.readLineSync();
 }
